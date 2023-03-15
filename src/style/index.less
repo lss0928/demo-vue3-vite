@@ -1,0 +1,42 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    & > .main {
+        height: 100%;
+        overflow: hidden;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        & > .main-header {
+            padding: 0 20px;
+        }
+        & > .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+    }
+    @keyframes throttle {
+        from {
+            pointer-events: none; // 属性用来控制一个元素能否响应鼠标操作
+            background: #ccc;
+        }
+        to {
+            pointer-events: all;
+            background: green;
+        }
+    }
+    // 节流
+    .throttle {
+        animation: throttle 2s step-end forwards;
+        &:active {
+            color: #0f0;
+            animation: none;
+        }
+    }
+}

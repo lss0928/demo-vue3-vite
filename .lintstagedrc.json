@@ -1,0 +1,6 @@
+{
+    "src/**/!(*.min).js": ["prettier --write .", "eslint  --fix"],
+    "src/**/.{vue,jsx,ts,tsx}": ["prettier --write .", "eslint  --fix"],
+    "src/**/*.{css,scss,sass,stylus}": ["prettier --write"],
+    "*.md": ["prettier --write"]
+}

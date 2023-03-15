@@ -1,0 +1,5 @@
+src/assets
+src/mock/*.ts
+public
+dist
+cypress
